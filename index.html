@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
+
+  </head>
+    <body>
+    <a-scene>
+      <a-sky color="lightblue"></a-sky>
+      
+       <!-- Put this inside the <a-scene> -->
+      <a-entity 
+      ply-model="src:DogHouse.ply"
+      position="-0.5 0.5 -3"
+      rotation="-90 90 90"
+      scale="2 2 2"
+      ></a-entity>
+
+       <!-- Put this inside the <a-scene>     -->
+      <a-entity 
+      ply-model="src:dog.ply"
+      position="-0 1 -1.5"
+      rotation="-90 30 90"
+      scale="0.5 0.5 0.5"
+        animation="
+        property:rotation;
+        from:-90 30 90;
+        to:-90 40 90;
+        dir:alternate;
+        loop:true"
+      ></a-entity>
+      
+ 
+    </a-scene>
+  </body>
+</html>
